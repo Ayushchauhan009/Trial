@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.navbar-bg{
+    background-color: rgba(38, 38, 38, 0.85);
+}
+
+.header-bg{
+    background-image: url("./assets/images/headerImage.png");
+    background-size: cover;
+}
+
+.bse-bg{
+    background-color: rgba(12, 1, 61, 1);
+}
+
+.link:hover{
+    transition: all 0.3s ease;
+   background: rgba(28, 28, 28);
+}
+
+
+
+.testimonial-container {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+  
+  .testimonial-item {
+    flex-shrink: 0;
+    width: 50%; /* Two items per row by default */
+  }
+  
+ 
+  
+  @media (max-width: 768px) {
+    .testimonial-container {
+      transform: translateX(-${(currentIndex * 100)}%);
+    }
+    
+    .testimonial-item {
+      width: 100%; /* Single item per row on mobile */
+    }
+  }
